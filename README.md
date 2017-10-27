@@ -8,7 +8,7 @@ Get font files from your installed npm packages
 ## Installation
 To install this module, you need to run the following command
 
-```Javascript
+```
 $ npm install gulp-font-npm-files
 ```
 
