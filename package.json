@@ -1,6 +1,6 @@
 {
   "name": "gulp-font-npm-files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get font files from your installed npm packages",
   "main": "index.js",
   "scripts": {

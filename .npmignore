@@ -5,3 +5,4 @@ karma.conf.js
 package-lock.json
 *.tgz
 yarn*
+.travis.yml
