@@ -1,0 +1,24 @@
+{
+  "name": "gulp-font-npm-files",
+  "version": "1.0.0",
+  "description": "Get font files from your installed npm packages",
+  "main": "index.js",
+  "scripts": {
+    "clean": "./node_modules/.bin/rimraf coverage reports *.tgz yarn* package-lock.json",
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  },
+  "repository": "https://github.com/yadickson/gulp-font-npm-files",
+  "author": "Yadickson Soto <yadickson@gmail.com>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "caller-id": "^0.1.0",
+    "path": "^0.12.7",
+    "read-file": "^0.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "rimraf": "^2.6.2",
+    "should": "^13.1.2"
+  }
+}

@@ -1,0 +1,7 @@
+test
+coverage
+reports
+karma.conf.js
+package-lock.json
+*.tgz
+yarn*
