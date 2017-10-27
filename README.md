@@ -19,7 +19,7 @@ var fontNpmFiles = require('gulp-font-npm-files');
 var files = fontNpmFiles([[filter, ]options][, callback]);
 ```
 
-This will read your package.json, iterate through your dependencies and returns an array of files if the files is defined in the packages package.json.
+This will read your package.json, iterate through your dependencies and returns an array of font files.
 
 ## Usage with gulp
 
@@ -110,4 +110,3 @@ Based on [GulpMainNpmFiles](https://github.com/drioemgaoin/GulpMainNpmFiles) and
 
 [npm-image]: https://badge.fury.io/js/gulp-font-npm-files.svg
 [npm-url]: https://badge.fury.io/js/gulp-font-npm-files
-
