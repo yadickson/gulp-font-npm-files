@@ -1,30 +1,25 @@
-var read = require('read-file');
+var fs = require('file-system');
 var path = require('path');
 var callerId = require('caller-id');
 
 module.exports = function(options) {
   function getFontFile(modulePath) {
-    var json = JSON.parse(read.sync(modulePath + '/package.json'));
-    var dir = "**";
+    var json = JSON.parse(fs.readFileSync(modulePath + '/package.json'));
     var find = false;
 
     for (var file in json.files) {
-      find = find || json.files[file] === "fonts";
-    }
+      var path = modulePath + "/" + json.files[file];
 
-    return find
-      ? modulePath + "/" + dir + "/fonts/*.{eot,svg,ttf,woff,woff2}"
-      : null;
+      if (fs.existsSync(path) && fs.statSync(path).isDirectory()) {
+        fs.recurseSync(path, ['**/*.{eot,svg,ttf,woff,woff2}'], function(filepath, relative, filename) {
+          keys.push(filepath);
+        });
+      }
+    }
   };
 
   function addFontFile(key) {
-    fontFile = getFontFile(options.nodeModulesPath + "/" + key);
-
-    if (!fontFile) {
-      return;
-    }
-
-    keys.push(fontFile);
+    getFontFile(options.nodeModulesPath + "/" + key);
   }
 
   options = options || {};
@@ -46,7 +41,7 @@ module.exports = function(options) {
   var buffer,
     packages,
     keys;
-  buffer = read.sync(options.packageJsonPath);
+  buffer = fs.readFileSync(options.packageJsonPath);
   packages = JSON.parse(buffer.toString());
   keys = [];
 

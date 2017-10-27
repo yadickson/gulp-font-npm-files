@@ -1,4 +1,8 @@
 {
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {},
+  "files": [
+    "missing",
+    "index.js"
+  ]
 }

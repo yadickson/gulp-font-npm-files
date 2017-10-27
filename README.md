@@ -18,7 +18,7 @@ var fontNpmFiles = require('gulp-font-npm-files');
 var files = fontNpmFiles([[filter, ]options][, callback]);
 ```
 
-This will read your package.json, iterate through your dependencies and returns an array of files if the files/fonts is defined in the packages package.json.
+This will read your package.json, iterate through your dependencies and returns an array of files if the files is defined in the packages package.json.
 
 ## Usage with gulp
 

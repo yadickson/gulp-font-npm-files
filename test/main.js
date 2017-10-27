@@ -13,11 +13,11 @@ describe('font-npm-files', function() {
           options = options || {};
 
           if (!options.packageJsonPath) {
-            options.packageJsonPath = __dirname + path;
+            options.packageJsonPath = path;
           }
 
           if (!options.nodeModulesPath) {
-            options.nodeModulesPath = __dirname + "/fixtures";
+            options.nodeModulesPath = "fixtures";
           }
 
           var srcFiles = fontNpmFiles(options);
@@ -41,10 +41,10 @@ describe('font-npm-files', function() {
 
   it('should select the expected files with dependency', function(done) {
       expect([
-          '/fixtures/module1/**/fonts/*.{eot,svg,ttf,woff,woff2}',
-          '/fixtures/module2/**/fonts/*.{eot,svg,ttf,woff,woff2}'
+          '/fixtures/module1/fonts/file.eot',
+          '/fixtures/module2/fonts/font.eot'
       ])
-      .fromConfig('/_package.json')
+      .fromConfig('_package.json')
       .when(done);
   });
 });
