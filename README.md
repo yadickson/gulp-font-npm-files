@@ -1,6 +1,8 @@
-# gulp-font-npm-files [![GitHub version][github-image]][github-url]
+# gulp-font-npm-files
 
-### Travis-CI [![TravisCI Status][travis-image]][travis-url]
+[![TravisCI Status][travis-image]][travis-url]
+[![GitHub version][github-image]][github-url]
+[![npm version][npm-image]][npm-url]
 
 Get font files from your installed npm packages
 
@@ -102,13 +104,14 @@ gulp.task('copyNpmDependencies', function() {
 
 ## Comments
 
-Based on [Romain Diegoni's GulpMainNpmFiles](https://github.com/drioemgaoin/GulpMainNpmFiles).
+Based on [GulpMainNpmFiles](https://github.com/drioemgaoin/GulpMainNpmFiles) and [GulpStyleNpmFiles](https://github.com/adalbueno/GulpStyleNpmFiles).
 
-Based on [Adalberto Diniz Bueno Junior GulpStyleNpmFiles](https://github.com/adalbueno/GulpStyleNpmFiles).
-
-
-[travis-image]: https://travis-ci.org/yadickson/gulp-font-npm-files.png
+[travis-image]: https://travis-ci.org/yadickson/gulp-font-npm-files.svg
 [travis-url]: https://travis-ci.org/yadickson/gulp-font-npm-files
 
-[github-image]: https://badge.fury.io/gh/yadickson%2Fgulp-font-npm-files.png
+[github-image]: https://badge.fury.io/gh/yadickson%2Fgulp-font-npm-files.svg
 [github-url]: https://badge.fury.io/gh/yadickson%2Fgulp-font-npm-files
+
+[npm-image]: https://badge.fury.io/js/gulp-font-npm-files.svg
+[npm-url]: https://badge.fury.io/js/gulp-font-npm-files
+
