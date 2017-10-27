@@ -1,7 +1,6 @@
 # gulp-font-npm-files
 
 [![TravisCI Status][travis-image]][travis-url]
-[![GitHub version][github-image]][github-url]
 [![npm version][npm-image]][npm-url]
 
 Get font files from your installed npm packages
@@ -108,9 +107,6 @@ Based on [GulpMainNpmFiles](https://github.com/drioemgaoin/GulpMainNpmFiles) and
 
 [travis-image]: https://travis-ci.org/yadickson/gulp-font-npm-files.svg
 [travis-url]: https://travis-ci.org/yadickson/gulp-font-npm-files
-
-[github-image]: https://badge.fury.io/gh/yadickson%2Fgulp-font-npm-files.svg
-[github-url]: https://badge.fury.io/gh/yadickson%2Fgulp-font-npm-files
 
 [npm-image]: https://badge.fury.io/js/gulp-font-npm-files.svg
 [npm-url]: https://badge.fury.io/js/gulp-font-npm-files
