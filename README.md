@@ -103,6 +103,7 @@ gulp.task('copyNpmDependencies', function() {
 ## Comments
 
 Based on [Romain Diegoni's GulpMainNpmFiles](https://github.com/drioemgaoin/GulpMainNpmFiles).
+
 Based on [Adalberto Diniz Bueno Junior GulpStyleNpmFiles](https://github.com/adalbueno/GulpStyleNpmFiles).
 
 
