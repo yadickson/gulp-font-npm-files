@@ -24,13 +24,8 @@ module.exports = function(options) {
 
     options = options || {};
 
-    if (!options.nodeModulesPath) {
-        options.nodeModulesPath = './node_modules';
-    }
-
-    if (!options.packageJsonPath) {
-        options.packageJsonPath = './package.json';
-    }
+    options.nodeModulesPath = options.nodeModulesPath || './node_modules';
+    options.packageJsonPath = options.packageJsonPath || './package.json';
 
     var caller = callerId.getData();
     options.nodeModulesPath = path.join(path.dirname(caller.filePath), options.nodeModulesPath);
