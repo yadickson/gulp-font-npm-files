@@ -2,6 +2,9 @@
 
 [![TravisCI Status][travis-image]][travis-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
+[![dependencies][dependencies-image]][dependencies-url]
+[![dev-dependencies][dev-dependencies-image]][dev-dependencies-url]
+[![Known Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]
 [![npm version][npm-image]][npm-url]
 
 Get font files from your installed npm packages
@@ -111,6 +114,15 @@ Based on [GulpMainNpmFiles](https://github.com/drioemgaoin/GulpMainNpmFiles) and
 
 [coveralls-image]: https://coveralls.io/repos/github/yadickson/gulp-font-npm-files/badge.svg
 [coveralls-url]: https://coveralls.io/github/yadickson/gulp-font-npm-files
+
+[dependencies-image]: https://david-dm.org/yadickson/gulp-font-npm-files/status.svg
+[dependencies-url]: https://david-dm.org/yadickson/gulp-font-npm-files?view=list
+
+[dev-dependencies-image]: https://david-dm.org/yadickson/gulp-font-npm-files/dev-status.svg
+[dev-dependencies-url]: https://david-dm.org/yadickson/gulp-font-npm-files?type=dev&view=list
+
+[vulnerabilities-image]: https://snyk.io/package/npm/gulp-font-npm-files/badge.svg
+[vulnerabilities-url]: https://snyk.io/package/npm/gulp-font-npm-files
 
 [npm-image]: https://badge.fury.io/js/gulp-font-npm-files.svg
 [npm-url]: https://badge.fury.io/js/gulp-font-npm-files
