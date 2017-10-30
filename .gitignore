@@ -63,3 +63,5 @@ reports/
 package-lock.json
 
 *.lock
+
+.nyc*

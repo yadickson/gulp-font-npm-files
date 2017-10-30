@@ -1,4 +1,4 @@
-var fontNpmFiles = require('../');
+var fontNpmFiles = require('../../');
 var path = require('path');
 
 require('should');
@@ -10,17 +10,8 @@ describe('font-npm-files', function() {
       });
 
       function run(path, options, done) {
-          options = options || {};
 
-          if (!options.packageJsonPath) {
-            options.packageJsonPath = path;
-          }
-
-          if (!options.nodeModulesPath) {
-            options.nodeModulesPath = "fixtures";
-          }
-
-          var srcFiles = fontNpmFiles(options);
+          var srcFiles = fontNpmFiles();
           srcFiles.should.be.eql(expectedFiles);
 
           if (done) {
@@ -41,10 +32,10 @@ describe('font-npm-files', function() {
 
   it('should select the expected files with dependency', function(done) {
       expect([
-          '/fixtures/module1/fonts/file.eot',
-          '/fixtures/module2/fonts/font.eot'
+          '/node_modules/module1/fonts/file.eot',
+          '/node_modules/module2/fonts/font.eot'
       ])
-      .fromConfig('_package.json')
+      .fromConfig()
       .when(done);
   });
 });
