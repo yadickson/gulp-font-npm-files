@@ -24,12 +24,19 @@ module.exports = function(options) {
 
     options = options || {};
 
-    options.nodeModulesPath = options.nodeModulesPath || './node_modules';
-    options.packageJsonPath = options.packageJsonPath || './package.json';
+    if (!options.nodeModulesPath) {
+        options.nodeModulesPath = './node_modules';
+    } else if (!path.isAbsolute(options.nodeModulesPath)) {
+        var caller = callerId.getData();
+        options.nodeModulesPath = path.join(path.dirname(caller.filePath), options.nodeModulesPath);
+    }
 
-    var caller = callerId.getData();
-    options.nodeModulesPath = path.join(path.dirname(caller.filePath), options.nodeModulesPath);
-    options.packageJsonPath = path.join(path.dirname(caller.filePath), options.packageJsonPath);
+    if (!options.packageJsonPath) {
+        options.packageJsonPath = './package.json';
+    } else if (!path.isAbsolute(options.packageJsonPath)) {
+        var caller = callerId.getData();
+        options.packageJsonPath = path.join(path.dirname(caller.filePath), options.packageJsonPath);
+    }
 
     var buffer,
         packages,
