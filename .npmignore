@@ -7,3 +7,4 @@ package-lock.json
 yarn*
 .travis.yml
 .nyc*
+node_modules
