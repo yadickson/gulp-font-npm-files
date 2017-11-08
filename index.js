@@ -34,12 +34,16 @@ module.exports = function(options) {
     var buffer,
         packages,
         keys;
-    buffer = fs.readFileSync(options.packageJsonPath);
-    packages = JSON.parse(buffer.toString());
+
     keys = [];
 
-    for (var key in packages.dependencies) {
-        addFontFile(key)
+    if (fs.existsSync(options.packageJsonPath)) {
+        buffer = fs.readFileSync(options.packageJsonPath);
+        packages = JSON.parse(buffer.toString());
+
+        for (var key in packages.dependencies) {
+            addFontFile(key)
+        }
     }
 
     return keys;
