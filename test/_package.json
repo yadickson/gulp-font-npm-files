@@ -1,0 +1,11 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "module1": "*",
+    "module2": "*",
+    "module3": "*"
+  },
+  "devDependencies": {
+    "module4": "*"
+  }
+}

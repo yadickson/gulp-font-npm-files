@@ -1,6 +1,6 @@
+'use strict'
+
 var fs = require('file-system');
-var path = require('path');
-var callerId = require('caller-id');
 
 module.exports = function(options) {
     function getFontFile(modulePath) {
@@ -26,16 +26,14 @@ module.exports = function(options) {
 
     if (!options.nodeModulesPath) {
         options.nodeModulesPath = './node_modules';
-    } else if (!path.isAbsolute(options.nodeModulesPath)) {
-        var caller = callerId.getData();
-        options.nodeModulesPath = path.join(path.dirname(caller.filePath), options.nodeModulesPath);
     }
 
     if (!options.packageJsonPath) {
         options.packageJsonPath = './package.json';
-    } else if (!path.isAbsolute(options.packageJsonPath)) {
-        var caller = callerId.getData();
-        options.packageJsonPath = path.join(path.dirname(caller.filePath), options.packageJsonPath);
+    }
+
+    if (!options.devDependencies) {
+        options.devDependencies = false;
     }
 
     var buffer,
@@ -51,7 +49,13 @@ module.exports = function(options) {
         for (var key in packages.dependencies) {
             addFontFile(key)
         }
+        
+        if (options.devDependencies) {
+            for (var key in packages.devDependencies) {
+                addFontFile(key)
+            }
+        }
     }
 
     return keys;
-};
+}
