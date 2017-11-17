@@ -10,10 +10,17 @@
 Get font files from your installed npm packages
 
 ## Installation
-To install this module, you need to run the following command
 
+Simply run a install using your terminal and you're good to go!
+
+```bash
+npm install --save gulp-font-npm-files
 ```
-$ npm install gulp-font-npm-files
+
+If you're a cool kid using Yarn then simply just use yarn as you would
+
+```bash
+yarn add gulp-font-npm-files
 ```
 
 ## Usage
