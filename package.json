@@ -6,7 +6,9 @@
   "scripts": {
     "clean": "./node_modules/.bin/rimraf coverage reports *.tgz",
     "test": "./node_modules/.bin/nyc --reporter=html mocha --recursive",
-    "coveralls": "./node_modules/.bin/nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "./node_modules/.bin/nyc report --reporter=text-lcov | coveralls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": "https://github.com/yadickson/gulp-font-npm-files",
   "author": "Yadickson Soto <yadickson@gmail.com>",
@@ -20,6 +22,7 @@
     "nyc": "^11.2.1",
     "path": "^0.12.7",
     "rimraf": "^2.6.2",
-    "should": "^13.1.2"
+    "should": "^13.1.2",
+    "snyk": "^1.78.0"
   }
 }

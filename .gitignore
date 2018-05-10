@@ -65,4 +65,4 @@ package-lock.json
 *.lock
 
 .nyc*
-.snyk*
+
