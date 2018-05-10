@@ -36,7 +36,7 @@ This will read your package.json, iterate through your dependencies and returns 
 
 ```Javascript
 var gulp = require('gulp');
-var styleNpmFiles = require('gulp-font-npm-files');
+var fontNpmFiles = require('gulp-font-npm-files');
 
 gulp.task('TASKNAME', function() {
     return gulp.src(fontNpmFiles())
@@ -114,7 +114,7 @@ gulp.task('copyNpmDependencies', function() {
 
 ## Comments
 
-Based on [GulpMainNpmFiles](https://github.com/drioemgaoin/GulpMainNpmFiles) and [GulpStyleNpmFiles](https://github.com/adalbueno/GulpStyleNpmFiles).
+Based on [GulpMainNpmFiles](https://github.com/drioemgaoin/GulpMainNpmFiles) and [GulpfontNpmFiles](https://github.com/adalbueno/GulpfontNpmFiles).
 
 [travis-image]: https://travis-ci.org/yadickson/gulp-font-npm-files.svg
 [travis-url]: https://travis-ci.org/yadickson/gulp-font-npm-files
