@@ -7,6 +7,8 @@
     "clean": "./node_modules/.bin/rimraf coverage reports *.tgz",
     "test": "./node_modules/.bin/nyc --reporter=html mocha --recursive",
     "coveralls": "./node_modules/.bin/nyc report --reporter=text-lcov | coveralls",
+    "snyk-test": "snyk test",
+    "snyk-wizard": "snyk wizard",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
   },
